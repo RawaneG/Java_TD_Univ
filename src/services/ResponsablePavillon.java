@@ -7,16 +7,40 @@ public class ResponsablePavillon
     private int id;
     private String login;
     private String password;
-    private ArrayList etudiants;
-    private ArrayList mesPavillons;
-    private ArrayList mesChambres;
+    private ArrayList<?> etudiants;
+    private ArrayList<?> mesPavillons;
+    private ArrayList<?> mesChambres;
+    /*
+     * Getter and Setter mes chambres
+     */
+    public ArrayList<?> getMesChambres()
+    {
+        return mesChambres;
+    }
+    public void setMesChambres(ArrayList<?> mesChambres)
+    {
+        this.mesChambres = mesChambres;
+    }
+    /*
+     * Getter and Setter mes pavillons
+     */
+    public ArrayList<?> getMesPavillons()
+    {
+        return mesPavillons;
+    }
+    public void setMesPavillons(ArrayList<?> mesPavillons)
+    {
+        this.mesPavillons = mesPavillons;
+    }
     /*
      * Getter and Setter Etudiants
      */
-    public ArrayList getEtudiants() {
+    public ArrayList<?> getEtudiants()
+    {
         return etudiants;
     }
-    public void setEtudiants(ArrayList etudiants) {
+    public void setEtudiants(ArrayList<?> etudiants)
+    {
         this.etudiants = etudiants;
     }
     /*

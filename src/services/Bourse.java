@@ -9,8 +9,27 @@ public class Bourse implements IService
     private int id;
     private boolean type;
     private int montant;
-    private ArrayList nonloge;
-    private ArrayList loge;
+    private ArrayList<?> nonloge;
+    private ArrayList<?> loge;
+
+    /*
+     * Getter and Setter Logé
+     */
+    public ArrayList<?> getLoge() {
+        return loge;
+    }
+    public void setLoge(ArrayList<?> loge) {
+        this.loge = loge;
+    }
+    /*
+     * Getter and Setter Non Logé
+     */
+    public ArrayList<?> getNonloge() {
+        return nonloge;
+    }
+    public void setNonloge(ArrayList<?> nonloge) {
+        this.nonloge = nonloge;
+    }
     /*
      * Getter and Setter Id
      */
@@ -45,23 +64,23 @@ public class Bourse implements IService
         this.montant = montant;
     }
     @Override
-    public void add() {
-        // TODO Auto-generated method stub
+    public void add()
+    {
 
     }
     @Override
-    public void edit() {
-        // TODO Auto-generated method stub
+    public void edit()
+    {
 
     }
     @Override
-    public void list() {
-        // TODO Auto-generated method stub
+    public void list()
+    {
 
     }
     @Override
-    public void remove() {
-        // TODO Auto-generated method stub
+    public void remove()
+    {
 
     }
 }

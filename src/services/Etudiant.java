@@ -18,6 +18,15 @@ public class Etudiant
 
     }
     /*
+     * Getter and Setter du responsable de pavillon
+     */
+    public ResponsablePavillon getMonResponsable() {
+        return monResponsable;
+    }
+    public void setMonResponsable(ResponsablePavillon monResponsable) {
+        this.monResponsable = monResponsable;
+    }
+    /*
      * Getter and Setter Id
      */
     public int getId()

@@ -10,7 +10,34 @@ public class Chambre
     private boolean typeChambre;
     private Pavillon monPavillon;
     private ResponsablePavillon monResponsable;
-    private ArrayList monLogeur;
+    private ArrayList<?> monLogeur;
+    /*
+     * Getter and Setter le logé
+     */
+    public ArrayList<?> getMonLogeur() {
+        return monLogeur;
+    }
+    public void setMonLogeur(ArrayList<?> monLogeur) {
+        this.monLogeur = monLogeur;
+    }
+    /*
+     * Getter and Setter du responsable de pavillon
+     */
+    public ResponsablePavillon getMonResponsable() {
+        return monResponsable;
+    }
+    public void setMonResponsable(ResponsablePavillon monResponsable) {
+        this.monResponsable = monResponsable;
+    }
+    /*
+     * Getter and Setter Nom Pavillon
+     */
+    public Pavillon getMonPavillon() {
+        return monPavillon;
+    }
+    public void setMonPavillon(Pavillon monPavillon) {
+        this.monPavillon = monPavillon;
+    }
     /*
      * Getter and Setter Id
      */
