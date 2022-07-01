@@ -1,5 +1,4 @@
 package services;
-
 import java.util.Date;
 
 public class Etudiant
@@ -11,11 +10,17 @@ public class Etudiant
     protected String telephone;
     protected Date dateNaissance;
     protected String matricule;
-    private ResponsablePavillon monResponsable;
+    protected ResponsablePavillon monResponsable;
 
-    public Etudiant()
+    public Etudiant(String nom, String prenom, String email, String telephone, Date dateNaissance, String matricule, ResponsablePavillon monResponsable)
     {
-
+        this.nom = nom;
+        this.prenom = prenom;
+        this.email = email;
+        this.telephone = telephone;
+        this.dateNaissance = dateNaissance;
+        this.matricule = matricule;
+        this.monResponsable = monResponsable;
     }
     /*
      * Getter and Setter du responsable de pavillon
@@ -102,6 +107,12 @@ public class Etudiant
     public void setMatricule(String matricule)
     {
         this.matricule = matricule;
+    }
+    @Override
+    public String toString() {
+        return "Etudiant [dateNaissance=" + dateNaissance + ", email=" + email + ", id=" + id + ", matricule="
+                + matricule + ", monResponsable=" + monResponsable + ", nom=" + nom + ", prenom=" + prenom
+                + ", telephone=" + telephone + "]";
     }
 
 }

@@ -2,44 +2,65 @@ package services;
 
 import java.util.ArrayList;
 
-public class ResponsablePavillon
+import models.IService;
+
+public class ResponsablePavillon implements IService
 {
     private int id;
+    private String nomComplet;
     private String login;
     private String password;
-    private ArrayList<?> etudiants;
-    private ArrayList<?> mesPavillons;
-    private ArrayList<?> mesChambres;
+    private ArrayList<Etudiant> etudiants;
+    private ArrayList<Pavillon> mesPavillons;
+    private ArrayList<Chambre> mesChambres;
+    /*
+     * Constructeur nom Complet
+     */
+    public ResponsablePavillon(String nomComplet)
+    {
+        this.nomComplet = nomComplet;
+    }
+    /*
+     * Getter nomComplet
+     */
+    public String getNomComplet()
+    {
+        return nomComplet;
+    }
+    public void setNomComplet(String nomComplet)
+    {
+        this.nomComplet = nomComplet;
+    }
     /*
      * Getter and Setter mes chambres
      */
-    public ArrayList<?> getMesChambres()
+    public ArrayList<Chambre> getMesChambres()
     {
         return mesChambres;
     }
-    public void setMesChambres(ArrayList<?> mesChambres)
+    public void setMesChambres(ArrayList<Chambre> mesChambres)
     {
         this.mesChambres = mesChambres;
     }
     /*
      * Getter and Setter mes pavillons
      */
-    public ArrayList<?> getMesPavillons()
+    public ArrayList<Pavillon> getMesPavillons()
     {
         return mesPavillons;
     }
-    public void setMesPavillons(ArrayList<?> mesPavillons)
+    public void setMesPavillons(ArrayList<Pavillon> mesPavillons)
     {
         this.mesPavillons = mesPavillons;
     }
     /*
      * Getter and Setter Etudiants
      */
-    public ArrayList<?> getEtudiants()
+    public ArrayList<Etudiant> getEtudiants()
     {
         return etudiants;
     }
-    public void setEtudiants(ArrayList<?> etudiants)
+    public void setEtudiants(ArrayList<Etudiant> etudiants)
     {
         this.etudiants = etudiants;
     }
@@ -69,5 +90,32 @@ public class ResponsablePavillon
     }
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public void list()
+    {
+    }
+
+    @Override
+    public void add()
+    {
+
+    }
+
+    @Override
+    public void edit()
+    {
+
+    }
+
+    @Override
+    public void remove()
+    {
+
+    }
+    @Override
+    public String toString() {
+        return "ResponsablePavillon [nomComplet=" + nomComplet + "]";
     }
 }

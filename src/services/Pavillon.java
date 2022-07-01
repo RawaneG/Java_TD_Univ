@@ -7,7 +7,7 @@ public class Pavillon
     private int id;
     private String numeroPavillon;
     private String nombreEtage;
-    private ArrayList<?> chambres;
+    private ArrayList<Chambre> chambres;
     private ResponsablePavillon monResponsable;
         /*
      * Getter and Setter Id
@@ -39,10 +39,10 @@ public class Pavillon
         /*
      * Getter and Setter mes chambres
      */
-    public ArrayList<?> getChambres() {
+    public ArrayList<Chambre> getChambres() {
         return chambres;
     }
-    public void setChambres(ArrayList<?> chambres) {
+    public void setChambres(ArrayList<Chambre> chambres) {
         this.chambres = chambres;
     }
         /*

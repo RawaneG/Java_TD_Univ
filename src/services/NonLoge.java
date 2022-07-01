@@ -1,9 +1,14 @@
 package services;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class NonLoge extends Etudiant
 {
+    public NonLoge(String nom, String prenom, String email, String telephone, Date dateNaissance, String matricule, ResponsablePavillon monResponsable)
+    {
+        super(nom, prenom, email, telephone, dateNaissance, matricule, monResponsable);
+    }
     private int id;
     private ArrayList<?> bourses;
     /*

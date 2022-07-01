@@ -2,32 +2,30 @@ package services;
 
 import java.util.ArrayList;
 
-import models.IService;
-
-public class Bourse implements IService
+public class Bourse
 {
     private int id;
     private boolean type;
     private int montant;
-    private ArrayList<?> nonloge;
-    private ArrayList<?> loge;
+    private ArrayList<NonLoge> nonloge;
+    private ArrayList<Loge> loge;
 
     /*
      * Getter and Setter Logé
      */
-    public ArrayList<?> getLoge() {
+    public ArrayList<Loge> getLoge() {
         return loge;
     }
-    public void setLoge(ArrayList<?> loge) {
+    public void setLoge(ArrayList<Loge> loge) {
         this.loge = loge;
     }
     /*
      * Getter and Setter Non Logé
      */
-    public ArrayList<?> getNonloge() {
+    public ArrayList<NonLoge> getNonloge() {
         return nonloge;
     }
-    public void setNonloge(ArrayList<?> nonloge) {
+    public void setNonloge(ArrayList<NonLoge> nonloge) {
         this.nonloge = nonloge;
     }
     /*
@@ -62,25 +60,5 @@ public class Bourse implements IService
     public void setMontant(int montant)
     {
         this.montant = montant;
-    }
-    @Override
-    public void add()
-    {
-
-    }
-    @Override
-    public void edit()
-    {
-
-    }
-    @Override
-    public void list()
-    {
-
-    }
-    @Override
-    public void remove()
-    {
-
     }
 }
