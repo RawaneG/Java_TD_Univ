@@ -2,11 +2,9 @@ package services;
 
 import java.util.ArrayList;
 
-public class Bourse
+public enum Bourse
 {
-    private int id;
-    private boolean type;
-    private int montant;
+    DEMI, ENTIERE;
     private ArrayList<NonLoge> nonloge;
     private ArrayList<Loge> loge;
 
@@ -27,38 +25,5 @@ public class Bourse
     }
     public void setNonloge(ArrayList<NonLoge> nonloge) {
         this.nonloge = nonloge;
-    }
-    /*
-     * Getter and Setter Id
-     */
-    public int getId()
-    {
-        return id;
-    }
-    public void setId(int id)
-    {
-        this.id = id;
-    }
-    /*
-     * Getter and Setter Type
-     */
-    public boolean isType()
-    {
-        return type;
-    }
-    public void setType(boolean type)
-    {
-        this.type = type;
-    }
-    /*
-     * Getter and Setter Montant
-     */
-    public int getMontant()
-    {
-        return montant;
-    }
-    public void setMontant(int montant)
-    {
-        this.montant = montant;
     }
 }

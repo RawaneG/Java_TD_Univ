@@ -5,15 +5,20 @@ import java.util.ArrayList;
 public class Chambre
 {
     private int id;
-    private String numeroChambre;
-    private String numeroEtage;
-    private boolean typeChambre;
+    private int numeroChambre;
+    private int numeroEtage;
+    private String typeChambre;
     private Pavillon monPavillon;
     private ResponsablePavillon monResponsable;
     private ArrayList<Loge> monLogeur;
-    /*
-     * Getter and Setter le logé
-     */
+
+
+    public Chambre(int numeroChambre, int numeroEtage, String typeChambre, Pavillon monPavillon) {
+        this.numeroChambre = numeroChambre;
+        this.numeroEtage = numeroEtage;
+        this.typeChambre = typeChambre;
+        this.monPavillon = monPavillon;
+    }
     public ArrayList<Loge> getMonLogeur() {
         return monLogeur;
     }
@@ -50,28 +55,51 @@ public class Chambre
     /*
      * Getter and Setter Numéro de Chambre
      */
-    public String getNumeroChambre() {
+    public int getNumeroChambre() {
         return numeroChambre;
     }
-    public void setNumeroChambre(String numeroChambre) {
+    public void setNumeroChambre(int numeroChambre) {
         this.numeroChambre = numeroChambre;
     }
     /*
      * Getter and Setter Numéro d'Étage
      */
-    public String getNumeroEtage() {
+    public int getNumeroEtage() {
         return numeroEtage;
     }
-    public void setNumeroEtage(String numeroEtage) {
+    public void setNumeroEtage(int numeroEtage) {
         this.numeroEtage = numeroEtage;
     }
     /*
      * Getter and Setter Type de Chambre
      */
-    public boolean isTypeChambre() {
+    public String isTypeChambre() {
         return typeChambre;
     }
-    public void setTypeChambre(boolean typeChambre) {
+    public void setTypeChambre(String typeChambre) {
         this.typeChambre = typeChambre;
+    }
+
+    public static Object[] add(int newTaille, Object newElement, Object[] myArray)
+    {
+        Object[] newArray = new Object[newTaille + 1];
+        for (int i = 0; i < newTaille; i++)
+        {
+            newArray[i] = myArray[i];
+        }
+        newArray[newTaille] = newElement;
+        return newArray;
+    }
+
+    public static void list(Object[] monTabkeau)
+    {
+        for (int i = 0; i < monTabkeau.length; i++)
+        {
+            System.out.println(monTabkeau[i]);
+        }
+    }
+    @Override
+    public String toString() {
+        return "Chambre [monPavillon=" + monPavillon + ", numeroChambre=" + numeroChambre + ", numeroEtage=" + numeroEtage + ", typeChambre=" + typeChambre + "]";
     }
 }

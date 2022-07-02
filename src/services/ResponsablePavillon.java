@@ -2,9 +2,7 @@ package services;
 
 import java.util.ArrayList;
 
-import models.IService;
-
-public class ResponsablePavillon implements IService
+public class ResponsablePavillon
 {
     private int id;
     private String nomComplet;
@@ -92,28 +90,6 @@ public class ResponsablePavillon implements IService
         this.password = password;
     }
 
-    @Override
-    public void list()
-    {
-    }
-
-    @Override
-    public void add()
-    {
-
-    }
-
-    @Override
-    public void edit()
-    {
-
-    }
-
-    @Override
-    public void remove()
-    {
-
-    }
     @Override
     public String toString() {
         return "ResponsablePavillon [nomComplet=" + nomComplet + "]";
